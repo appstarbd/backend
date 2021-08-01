@@ -1,0 +1,9 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/*@import '~@mdi/font/css/materialdesignicons.css';*/
+
+tr {
+    border: darkblue;
+}
