@@ -46,4 +46,13 @@ Route::group(['middleware' => ['auth']], function ($route) {
 ////    return ['token' => $token->plainTextToken];
 //})->name('tokens.create');
 
+//Route::get('sanctum/csrf-cookie', function (Request $request)
+//{
+//    return response()->json([
+////        'token' => '402992317942e478cd7dced411677fc7aaba7620d34b49daeae4e0a3ec57652e',
+//        'message' => \Laravel\Sanctum\PersonalAccessToken::first()
+//    ], 200);
+////    return '402992317942e478cd7dced411677fc7aaba7620d34b49daeae4e0a3ec57652e';
+//})->name('sanctum.csrf-cookie');
+
 require __DIR__.'/auth.php';

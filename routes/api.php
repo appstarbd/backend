@@ -28,7 +28,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('product', [ProductController::class, 'index'])->name('api.product');
 Route::group(['middleware' => ['auth:sanctum']], function ($route) {
     Route::apiResources([
-        'user' => UserController::class,
+//        'user' => UserController::class,
 //        'product' => ProductController::class,
     ]);
+    Route::post('product', [ProductController::class, 'store'])->name('api.product.store');
 });
+
+/**Route::post('login', function (Request $request)
+{
+    if (Auth::attempt($request->only('email', 'password'))) {
+        $request->session()->regenerate();
+    }
+
+    return response()->json([
+        'message' => 'Invalid login details'
+    ], 401);
+})->name('api.login');**/

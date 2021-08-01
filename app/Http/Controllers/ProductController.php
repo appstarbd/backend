@@ -21,7 +21,7 @@ class ProductController extends Controller
 //        $this->data['products'] = Product::with(['image'])->paginate(10);
         $products = Product::with(['image'])->paginate(10);
         $this->data['products'] = $products;
-        if (request()->wantsJson()) {
+        if (request()->expectsJson()) {
             return response()->json($products);
         }
         return view('product.index', $this->data);

@@ -1,8 +1,8 @@
 # For more information: https://laravel.com/docs/sail
 version: '3'
 services:
-#    laravel.test:
-    localhost:
+    laravel.test:
+#    localhost:
         build:
             context: ./vendor/laravel/sail/runtimes/8.0
             dockerfile: Dockerfile
